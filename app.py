@@ -83,37 +83,8 @@ def graph_page():
 
 @app.route('/predict',methods=['GET', 'POST'])
 def predict():
-    '''
-    For rendering results on HTML GUI
-    '''
-    age = request.form.get("age")
-    sex = request.form.get("sex")
-    cp = request.form.get("cp")
-    trestbps = request.form.get("trestbps")
-    chol = request.form.get("chol")
-    fbs = request.form.get("fbs")
-    restecg = request.form.get("restecg")
-    thalach = request.form.get("thalach")
-    oldpeak = request.form.get("oldpeak")
-    exang = request.form.get("exang")
-    slope = request.form.get("slope")
-    ca = request.form.get("ca")
-    thal = request.form.get("thal")
-    algorithm = request.form.get("algorithm")
-    data = [age,sex,cp,trestbps,chol,fbs,restecg,thalach,exang,oldpeak,slope,ca,thal]
-    # data = list(np.float_(data))
-    result = get_algorithm(algorithm)
-    scaler2 = StandardScaler()
-    ##CHANGE THE INPUT TO NUMPY ARRAY
-    input_data_as_numpy_array = np.asarray(data)
-    #RESHAPE THE NUMPY ARRAY BECAUSE WE NEED TO PREDICT THE TARGET
-    input_data_reshaped = input_data_as_numpy_array.reshape(1,-1)
-    std_data = scaler2.fit_transform(input_data_reshaped)
-    prediction = result.predict(input_data_reshaped)
-    if prediction[0] == 0:
-        return render_template('main.html', prediction_text='The patient does not have Heart Disease' )
-    else:
-        return render_template('main.html', prediction_text='The patient has Heart Disease' )
+    return render_template('graph.html')
+
 
 
 
