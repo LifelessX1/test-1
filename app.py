@@ -14,19 +14,19 @@ app = Flask(__name__)
 def get_algorithm(x):
     x=int(x)
     if x == 0:
-        model = pickle.load(open('../HeartDisease/algorithm/model_rf.pkl', 'rb'))
+        model = pickle.load(open('algorithm/model_rf.pkl', 'rb'))
     elif x == 1:
-        model = pickle.load(open('../HeartDisease/algorithm/model_gb.pkl', 'rb'))
+        model = pickle.load(open('algorithm/model_gb.pkl', 'rb'))
     elif x == 2:
-        model = pickle.load(open('../HeartDisease/algorithm/model_knn.pkl', 'rb'))
+        model = pickle.load(open('algorithm/model_knn.pkl', 'rb'))
     elif x == 3:
-        model = pickle.load(open('../HeartDisease/algorithm/model_svm.pkl', 'rb'))
+        model = pickle.load(open('algorithm/model_svm.pkl', 'rb'))
     elif x == 4:
-        model = pickle.load(open('../HeartDisease/algorithm/model_dt.pkl', 'rb'))
+        model = pickle.load(open('algorithm/model_dt.pkl', 'rb'))
     elif x == 5:
-        model = pickle.load(open('../HeartDisease/algorithm/model_log.pkl', 'rb'))
+        model = pickle.load(open('algorithm/model_log.pkl', 'rb'))
     elif x == 6:
-        model = pickle.load(open('../HeartDisease/algorithm/model_gnb.pkl', 'rb'))
+        model = pickle.load(open('algorithm/model_gnb.pkl', 'rb'))
     return model
 
 # def send_email(email):

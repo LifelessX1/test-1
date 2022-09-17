@@ -3,6 +3,4 @@ sklearn
 pandas
 numpy
 gunicorn
-requests
 sendgrid
-pickle
