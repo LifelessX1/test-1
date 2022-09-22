@@ -57,6 +57,7 @@ def login():
     #     # firebase.post('/python-example-f6d0b/Students/',data)
     #     # return redirect(f"/success/{email}")
     #     # return render_template('main.html')
+    print(os.environ["someKey"])
     return render_template('login.html')
 
     
