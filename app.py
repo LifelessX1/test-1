@@ -4,6 +4,7 @@ from flask import Flask, request, jsonify, render_template, redirect, url_for
 from sklearn.preprocessing import StandardScaler
 import pickle
 import pandas as pd
+import os
 # import os
 # import sendgrid
 # import requests
@@ -40,6 +41,7 @@ def get_algorithm(x):
 
 @app.route("/", methods=['GET', 'POST'])
 def home():
+    os.environ["someKey"]="Hello"
     return render_template('index.html')
 
 
